@@ -1,0 +1,117 @@
+/* تصميم عام للصفحة */
+body {
+    font-family: 'Cairo', sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    direction: rtl;
+}
+
+/* تصميم الهيدر (العنوان الرئيسي) */
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 5px solid #003d82;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* المحتوى الرئيسي */
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.topic-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.topic-section h2 {
+    font-size: 1.8rem;
+    color: #003d82;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+/* تصميم الأكورديون (الأسئلة والأجوبة) */
+.accordion-item {
+    border-bottom: 1px solid #eee;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+    text-align: right;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+    background-color: #f9f9f9;
+}
+
+/* أيقونة السهم بجانب السؤال */
+.accordion-header::after {
+    content: '▼'; /* سهم لأسفل */
+    font-size: 0.8rem;
+    color: #0056b3;
+    transition: transform 0.3s ease;
+    margin-right: auto; /* لنقل السهم إلى اليسار */
+    padding-left: 10px;
+}
+
+.accordion-header.active::after {
+    transform: rotate(180deg); /* تدوير السهم عند الفتح */
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    background-color: #fdfdfd;
+    padding: 0 1rem;
+}
+
+.accordion-content p {
+    margin: 1rem 0;
+}
+
+/* تصميم الفوتر (التذييل) */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #333;
+    color: #f4f7f6;
+    margin-top: 2rem;
+}
